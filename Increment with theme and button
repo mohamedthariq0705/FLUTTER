@@ -33,6 +33,16 @@ class MyAppState extends State<MyApp>
 @override
 Widget build(BuildContext context){
   return MaterialApp(
+    theme: new ThemeData(
+    primaryColor: Colors.red,
+      accentColor: Colors.black38,
+      buttonColor: Colors.blue,
+      textTheme: TextTheme(
+      body1: TextStyle(color:Colors.cyan),
+      
+      )
+    ),
+    
     home: Scaffold(
       floatingActionButton: FloatingActionButton(
 
@@ -44,14 +54,16 @@ Widget build(BuildContext context){
         title: new Text("Increment Counter"),
       ),
       body: new Center(
-        child: new Text(
-          "Count =" + count.toString(),
-          style: new TextStyle(fontSize: 30.0),
-         ),
+        //child: new Text(
+          //"Count =" + count.toString(),
+          //style: new TextStyle(fontSize: 30.0),
+          child: new RaisedButton(
+          onPressed:() {},
+          child: new Text("Hello"),
+          )),
        ),
-     ),
-   );
- }
+     );
+   }
 }
 
 
