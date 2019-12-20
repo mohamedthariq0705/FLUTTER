@@ -50,9 +50,22 @@ Widget build(BuildContext context){
         child: Icon(Icons.plus_one),
 
       ),
+      drawer: Drawer(),
       appBar: new AppBar(
         title: new Text("Increment Counter"),
+        elevation:10.0,
       ),
+      bottomNavigationBar: BottomNavigationBar(
+      items: <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+        title: Text("One"),
+        icon: Icon(Icons.access_alarm),
+        ),
+        BottomNavigationBarItem(
+        title: Text("Two"),
+        icon: Icon(Icons.account_balance),
+          )
+          ],),
       body: new Center(
         //child: new Text(
           //"Count =" + count.toString(),
@@ -65,7 +78,6 @@ Widget build(BuildContext context){
      );
    }
 }
-
 
 
 
